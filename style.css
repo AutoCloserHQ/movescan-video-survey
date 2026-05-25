@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #102033;
+}
+
+.page {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 16px 60px;
+}
+
+.hero {
+  text-align: center;
+  padding: 34px 18px 26px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e8f1ff;
+  color: #1f5eff;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.hero p {
+  max-width: 660px;
+  margin: 16px auto 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #526172;
+}
+
+.survey-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 18px 50px rgba(16, 32, 51, 0.12);
+  border: 1px solid rgba(16, 32, 51, 0.08);
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 34px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #27384c;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #d8e0ea;
+  border-radius: 14px;
+  padding: 13px 14px;
+  font-size: 15px;
+  outline: none;
+  background: #fbfcfe;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1f5eff;
+  box-shadow: 0 0 0 3px rgba(31, 94, 255, 0.12);
+}
+
+.helper {
+  margin: -8px 0 18px;
+  color: #5d6b7a;
+  line-height: 1.5;
+}
+
+.rooms {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.room-card {
+  border: 1px solid #dce5ef;
+  border-radius: 18px;
+  padding: 18px;
+  background: #fbfdff;
+}
+
+.room-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.room-card p {
+  margin: 0 0 14px;
+  color: #657384;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.uploadcare--widget__button {
+  background: #1f5eff !important;
+  border-radius: 12px !important;
+  padding: 11px 16px !important;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 26px;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 20px;
+  background: #102033;
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  opacity: 0.92;
+}
+
+.submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.status {
+  margin: 16px 0 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.status.success {
+  color: #138a44;
+}
+
+.status.error {
+  color: #c62828;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 18px 12px 44px;
+  }
+
+  .hero {
+    padding: 24px 8px 18px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .survey-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
