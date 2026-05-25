@@ -1,4 +1,4 @@
-const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/xiftm74h14lucoevr7vn3jiuegym65gu";
+const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/gq2alys5xkdd8baoj5rfpq0brz2il3do";
 const UPLOADCARE_PUBLIC_KEY = "0ff223f640764369dc2c";
 
 const rooms = [
