@@ -65,7 +65,7 @@ const rooms = [
   {
     key: "specialty_items",
     label: "Large / Specialty Items",
-    caption: "Include pianos, safes, gym equipment, marble/glass pieces, oversized furniture, mirrors, artwork, antiques, aquariums, or fragile/heavy items."
+    caption: "Optional — use this section only for special items that were not clearly shown in another room video, such as pianos, safes, gym equipment, marble/glass pieces, oversized furniture, large mirrors, artwork, antiques, aquariums, or anything fragile/heavy that may need special handling."
   },
   {
     key: "other_room",
