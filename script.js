@@ -71,7 +71,7 @@ const rooms = [
   }
 ];
 
-const MAKE_WEBHOOK_URL = "PASTE_MAKE_WEBHOOK_URL_HERE";
+const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/xiftm74h14lucoevr7vn3jiuegym65gu";
 const UPLOADCARE_PUBLIC_KEY = "0ff223f640764369dc2c";
 
 uploadcare.setSettings({
