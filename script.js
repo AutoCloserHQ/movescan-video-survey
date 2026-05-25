@@ -79,13 +79,10 @@ const form = document.getElementById("videoSurveyForm");
 const statusMessage = document.getElementById("statusMessage");
 const clientCodeInput = document.getElementById("clientCode");
 
-const pathParts = window.location.pathname.split("/").filter(Boolean);
-
-// For GitHub Pages, path can be:
-// /movescan-video-survey/
-// /movescan-video-survey/aplus
-// /movescan-video-survey/reliable
-clientCodeInput.value = pathParts[1] || "default";
+// Use this format:
+// https://autocloserhq.github.io/movescan-video-survey/?client_code=aplus
+const urlParams = new URLSearchParams(window.location.search);
+clientCodeInput.value = urlParams.get("client_code") || "default";
 
 rooms.forEach((room) => {
   const card = document.createElement("div");
