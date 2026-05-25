@@ -1,3 +1,6 @@
+const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/xiftm74h14lucoevr7vn3jiuegym65gu";
+const UPLOADCARE_PUBLIC_KEY = "0ff223f640764369dc2c";
+
 const rooms = [
   {
     key: "living_room",
@@ -71,25 +74,18 @@ const rooms = [
   }
 ];
 
-const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/xiftm74h14lucoevr7vn3jiuegym65gu";
-const UPLOADCARE_PUBLIC_KEY = "0ff223f640764369dc2c";
-
-uploadcare.setSettings({
-  publicKey: UPLOADCARE_PUBLIC_KEY,
-  tabs: "file camera",
-  previewStep: true,
-  multiple: false,
-  imagesOnly: false,
-  inputAcceptTypes: "video/*"
-});
-
 const roomUploads = document.getElementById("roomUploads");
 const form = document.getElementById("videoSurveyForm");
 const statusMessage = document.getElementById("statusMessage");
 const clientCodeInput = document.getElementById("clientCode");
 
 const pathParts = window.location.pathname.split("/").filter(Boolean);
-clientCodeInput.value = pathParts[0] || "default";
+
+// For GitHub Pages, path can be:
+// /movescan-video-survey/
+// /movescan-video-survey/aplus
+// /movescan-video-survey/reliable
+clientCodeInput.value = pathParts[1] || "default";
 
 rooms.forEach((room) => {
   const card = document.createElement("div");
@@ -102,11 +98,28 @@ rooms.forEach((room) => {
       type="hidden"
       role="uploadcare-uploader"
       name="${room.key}"
-      data-room-label="${room.label}"
+      data-public-key="${UPLOADCARE_PUBLIC_KEY}"
+      data-tabs="file camera"
+      data-preview-step="true"
+      data-images-only="false"
+      data-input-accept-types="video/*"
     />
   `;
 
   roomUploads.appendChild(card);
+});
+
+window.addEventListener("load", () => {
+  if (window.uploadcare) {
+    const uploadInputs = document.querySelectorAll('[role="uploadcare-uploader"]');
+
+    uploadInputs.forEach((input) => {
+      uploadcare.Widget(input);
+    });
+  } else {
+    statusMessage.className = "status error";
+    statusMessage.textContent = "Upload widget failed to load. Please refresh the page.";
+  }
 });
 
 form.addEventListener("submit", async (event) => {
@@ -164,6 +177,10 @@ form.addEventListener("submit", async (event) => {
     statusMessage.className = "status success";
     statusMessage.textContent = "Video survey submitted successfully. Thank you!";
     form.reset();
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 1200);
   } catch (error) {
     statusMessage.className = "status error";
     statusMessage.textContent = error.message;
