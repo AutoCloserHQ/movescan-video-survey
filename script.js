@@ -79,10 +79,30 @@ const form = document.getElementById("videoSurveyForm");
 const statusMessage = document.getElementById("statusMessage");
 const clientCodeInput = document.getElementById("clientCode");
 
-// Use this format:
-// https://autocloserhq.github.io/movescan-video-survey/?client_code=aplus
-const urlParams = new URLSearchParams(window.location.search);
-clientCodeInput.value = urlParams.get("client_code") || "default";
+function getClientCode() {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // Option 1:
+  // https://videosurvey.autocloserhq.com/?client_code=aplus
+  const queryClientCode = urlParams.get("client_code");
+  if (queryClientCode) {
+    return queryClientCode.trim().toLowerCase();
+  }
+
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+  // Option 2 on GitHub Pages:
+  // https://autocloserhq.github.io/movescan-video-survey/aplus
+  if (pathParts[0] === "movescan-video-survey") {
+    return (pathParts[1] || "default").trim().toLowerCase();
+  }
+
+  // Option 3 on custom domain:
+  // https://videosurvey.autocloserhq.com/aplus
+  return (pathParts[0] || "default").trim().toLowerCase();
+}
+
+clientCodeInput.value = getClientCode();
 
 rooms.forEach((room) => {
   const card = document.createElement("div");
@@ -156,7 +176,8 @@ form.addEventListener("submit", async (event) => {
       from_zip: formData.get("from_zip"),
       to_zip: formData.get("to_zip"),
       videos: videos,
-      submitted_at: new Date().toISOString()
+      submitted_at: new Date().toISOString(),
+      page_url: window.location.href
     };
 
     const response = await fetch(MAKE_WEBHOOK_URL, {
