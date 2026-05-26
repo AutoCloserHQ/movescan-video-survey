@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoveScan Video Survey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <main class="page">
+    <section class="hero">
+      <div class="badge">MoveScan Video Survey</div>
+      <h1>Upload short room videos for your moving estimate</h1>
+      <p>
+        Record each room for 10–15 seconds. Stand back, use good lighting,
+        and slowly scan left to right.
+      </p>
+    </section>
+
+    <form id="videoSurveyForm" class="survey-card">
+
+      <h2>Customer Info</h2>
+
+      <div class="grid">
+        <label>
+          Full Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" name="phone" required />
+        </label>
+
+        <label>
+          Move Date
+          <input type="date" name="move_date" />
+        </label>
+
+        <label>
+          From Zip
+          <input type="text" name="from_zip" />
+        </label>
+
+        <label>
+          To Zip
+          <input type="text" name="to_zip" />
+        </label>
+      </div>
+
+      <h2>Room Videos</h2>
+      <p class="helper">
+        Upload one short video per room. All sections are optional, but the more rooms you upload, the better the estimate.
+      </p>
+
+      <div id="roomUploads" class="rooms"></div>
+
+      <input type="hidden" name="client_code" id="clientCode" value="" />
+      <input type="hidden" name="survey_type" value="Video" />
+
+      <button type="submit" class="submit-btn">Submit Video Survey</button>
+
+      <p id="statusMessage" class="status"></p>
+    </form>
+  </main>
+
+  <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+  <script src="script.js?v=7"></script>
+</body>
+</html>
