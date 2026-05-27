@@ -4,18 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MoveScan Video Survey</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
 
   <main class="page">
     <section class="hero">
       <div class="badge">MoveScan Video Survey</div>
+
       <h1>Upload short room videos for your moving estimate</h1>
+
       <p>
-        Record each room for 10–15 seconds. Stand back, use good lighting,
-        and slowly scan left to right.
+        Record one short video per room. Start with a wide view, stand back as much as possible,
+        use good lighting, and slowly scan left to right for 10–15 seconds.
       </p>
+
+      <div class="tips-box">
+        <strong>Recording Tips:</strong>
+        <ul>
+          <li>Record one room at a time.</li>
+          <li>Start by showing the full room from a corner or doorway.</li>
+          <li>Move slowly from left to right.</li>
+          <li>Show large furniture, boxes, closets, shelves, and storage areas.</li>
+          <li>Keep each video around 10–15 seconds.</li>
+          <li>Wait for each video to fully finish uploading before pressing Submit.</li>
+        </ul>
+      </div>
     </section>
 
     <form id="videoSurveyForm" class="survey-card">
@@ -55,8 +69,15 @@
       </div>
 
       <h2>Room Videos</h2>
+
       <p class="helper">
-        Upload one short video per room. All sections are optional, but the more rooms you upload, the better the estimate.
+        Upload one short video per room. All sections are optional, but the more rooms you upload,
+        the better the estimate.
+      </p>
+
+      <p class="upload-note">
+        Important: After choosing or recording a video, please wait until the upload finishes before submitting.
+        Larger videos may take a minute depending on your connection.
       </p>
 
       <div id="roomUploads" class="rooms"></div>
@@ -71,6 +92,6 @@
   </main>
 
   <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
