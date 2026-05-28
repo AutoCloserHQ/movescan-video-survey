@@ -3,8 +3,8 @@ const UPLOADCARE_PUBLIC_KEY = "0ff223f640764369dc2c";
 
 const CLIENT_SETTINGS = {
   reliable: {
-    companyName: "Reliable Van Lines",
-    logo: "ReliableVanLinesLogo.gif"
+    companyName: "Immaculate Moving",
+    logo: "ImmaculateMovingLogo.png"
   },
   default: {
     companyName: "AutoCloser MoveScan",
