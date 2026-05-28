@@ -63,11 +63,6 @@ const rooms = [
     caption: "Include patio furniture, grills, umbrellas, planters, outdoor storage, bikes, and yard items."
   },
   {
-    key: "specialty_items",
-    label: "Large / Specialty Items",
-    caption: "Optional — use this section only for special items that were not clearly shown in another room video, such as pianos, safes, gym equipment, marble/glass pieces, oversized furniture, large mirrors, artwork, antiques, aquariums, or anything fragile/heavy that may need special handling."
-  },
-  {
     key: "other_room",
     label: "Other Room / Bonus Room",
     caption: "Include any office, den, playroom, nursery, guest room, loft, basement room, home gym, craft room, media room, hallway storage, or extra room."
