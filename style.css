@@ -278,3 +278,10 @@ textarea:focus {
     padding: 11px 12px;
   }
 }
+.powered-footer {
+  margin: 24px 0 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+}
