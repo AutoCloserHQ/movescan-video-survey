@@ -39,12 +39,47 @@ body {
   letter-spacing: -0.04em;
 }
 
-.hero p {
+.hero p,
+.hero-subtitle {
   max-width: 660px;
   margin: 16px auto 0;
   font-size: 17px;
   line-height: 1.5;
   color: #526172;
+}
+
+.tips-box {
+  margin: 24px auto 0;
+  max-width: 680px;
+  background: #ffffff;
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  padding: 18px 22px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  color: #334155;
+  text-align: left;
+}
+
+.tips-title,
+.tips-box strong {
+  display: block;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tips-box ul {
+  margin: 0 auto;
+  padding-left: 20px;
+  max-width: 560px;
+}
+
+.tips-box li {
+  margin: 7px 0;
+  line-height: 1.45;
+  font-size: 15px;
 }
 
 .survey-card {
@@ -99,6 +134,17 @@ textarea:focus {
   margin: -8px 0 18px;
   color: #5d6b7a;
   line-height: 1.5;
+}
+
+.upload-note {
+  margin: 12px 0 22px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .rooms {
@@ -181,8 +227,24 @@ textarea:focus {
     font-size: 28px;
   }
 
-  .hero p {
+  .hero p,
+  .hero-subtitle {
     font-size: 15px;
+  }
+
+  .tips-box {
+    padding: 16px;
+    border-radius: 16px;
+    margin-top: 18px;
+  }
+
+  .tips-title,
+  .tips-box strong {
+    font-size: 15px;
+  }
+
+  .tips-box li {
+    font-size: 14px;
   }
 
   .survey-card {
@@ -192,60 +254,6 @@ textarea:focus {
 
   .grid {
     grid-template-columns: 1fr;
-  }
-}
-.tips-box {
-  margin: 24px auto 0;
-  max-width: 760px;
-  background: #ffffff;
-  border: 1px solid #dbe4f0;
-  border-radius: 18px;
-  padding: 18px 22px;
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
-  color: #334155;
-  text-align: left;
-}
-
-.tips-box strong {
-  display: block;
-  color: #0f172a;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.tips-box ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.tips-box li {
-  margin: 6px 0;
-  line-height: 1.45;
-}
-
-.upload-note {
-  margin: 12px 0 22px;
-  background: #fff7ed;
-  border: 1px solid #fed7aa;
-  color: #9a3412;
-  border-radius: 14px;
-  padding: 12px 14px;
-  font-size: 14px;
-  line-height: 1.45;
-}
-@media (max-width: 720px) {
-  .tips-box {
-    padding: 16px;
-    border-radius: 16px;
-    margin-top: 18px;
-  }
-
-  .tips-box strong {
-    font-size: 15px;
-  }
-
-  .tips-box li {
-    font-size: 14px;
   }
 
   .upload-note {
