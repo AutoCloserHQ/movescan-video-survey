@@ -22,11 +22,13 @@ body {
 }
 
 .brand-logo {
-  width: 128px;
-  max-width: 45%;
-  height: auto;
+  width: 120px !important;
+  max-width: 120px !important;
+  height: auto !important;
   display: block;
-  margin: 0 auto 16px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  object-fit: contain;
   filter: drop-shadow(0 8px 18px rgba(15, 23, 42, 0.16));
 }
 
