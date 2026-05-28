@@ -9,7 +9,11 @@ const CLIENT_SETTINGS = {
   default: {
     companyName: "AutoCloser MoveScan",
     logo: "CC_20250926_175433.png"
-  }
+  },
+  aplus: {
+    companyName: "A Plus Moving",
+    logo: "AplusMoving.png"
+  },
 };
 
 const rooms = [
