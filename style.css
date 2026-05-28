@@ -234,10 +234,11 @@ textarea:focus {
     padding: 24px 8px 18px;
   }
 
-  .brand-logo {
-    width: 108px;
-    margin-bottom: 14px;
-  }
+ .brand-logo {
+  width: 95px !important;
+  max-width: 95px !important;
+  margin-bottom: 14px;
+}
 
   .hero h1 {
     font-size: 28px;
