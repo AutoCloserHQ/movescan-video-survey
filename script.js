@@ -1,6 +1,17 @@
 const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/gq2alys5xkdd8baoj5rfpq0brz2il3do";
 const UPLOADCARE_PUBLIC_KEY = "0ff223f640764369dc2c";
 
+const CLIENT_SETTINGS = {
+  reliable: {
+    companyName: "Reliable Van Lines",
+    logo: "ReliableVanLinesLogo.gif"
+  },
+  default: {
+    companyName: "AutoCloser MoveScan",
+    logo: "CC_20250926_175433.png"
+  }
+};
+
 const rooms = [
   {
     key: "living_room",
@@ -97,7 +108,20 @@ function getClientCode() {
   return (pathParts[0] || "default").trim().toLowerCase();
 }
 
+function applyClientBranding() {
+  const clientCode = getClientCode();
+  const settings = CLIENT_SETTINGS[clientCode] || CLIENT_SETTINGS.default;
+
+  const brandLogo = document.getElementById("brandLogo");
+
+  if (brandLogo) {
+    brandLogo.src = settings.logo;
+    brandLogo.alt = settings.companyName;
+  }
+}
+
 clientCodeInput.value = getClientCode();
+applyClientBranding();
 
 rooms.forEach((room) => {
   const card = document.createElement("div");
