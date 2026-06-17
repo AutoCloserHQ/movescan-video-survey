@@ -2,9 +2,9 @@ const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/gq2alys5xkdd8baoj5rfpq0brz2i
 const UPLOADCARE_PUBLIC_KEY = "0ff223f640764369dc2c";
 
 const CLIENT_SETTINGS = {
-  reliable: {
-    companyName: "Immaculate Moving",
-    logo: "ImmaculateMovingLogo.png"
+  modelmoving: {
+    companyName: "Model Moving",
+    logo: "ModelMoving-Logo.png"
   },
   default: {
     companyName: "AutoCloser MoveScan",
