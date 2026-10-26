@@ -22,8 +22,12 @@ const CLIENT_SETTINGS = {
     companyName: "A Plus Moving",
     logo: "AplusMoving.png"
   }
-};
 
+   txmoving: {
+    companyName: "TX Moving & Storage",
+    logo: "TX Moving NEW Logo.png"
+  }
+};
 
 const rooms = [
   {
