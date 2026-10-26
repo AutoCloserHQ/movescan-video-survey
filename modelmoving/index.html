@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoveScan Video Survey</title>
+  <link rel="stylesheet" href="/style.css?v=21" />
+</head>
+<body>
+
+  <main class="page">
+    <section class="hero">
+      <div class="brand-logo-wrap">
+  <img id="brandLogo" src="/ModelMoving-Logo.png" alt="Model Moving" class="brand-logo" />
+</div>
+
+      <div class="badge">MoveScan Video Survey</div>
+
+      <h1>Upload short room videos for your moving estimate</h1>
+
+      <p class="hero-subtitle">
+        Record one short video per room. Start with a wide view, stand back as much as possible,
+        use good lighting, and slowly scan from one side of the room to the other for 10–15 seconds.
+      </p>
+
+      <div class="tips-box">
+        <div class="tips-title">Recording Tips</div>
+
+        <ul>
+          <li>Record one room at a time.</li>
+          <li>Start by showing the full room from a corner or doorway.</li>
+          <li>Move slowly from one side of the room to the other.</li>
+          <li>Show large furniture, boxes, closets, shelves, and storage areas.</li>
+          <li>Keep each video around 10–15 seconds.</li>
+          <li>Wait for each video to fully finish uploading before pressing Submit.</li>
+        </ul>
+      </div>
+    </section>
+
+    <form id="videoSurveyForm" class="survey-card">
+
+      <h2>Customer Info</h2>
+
+      <div class="grid">
+        <label>
+          Full Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" name="phone" required />
+        </label>
+
+        <label>
+          Move Date
+          <input type="date" name="move_date" />
+        </label>
+
+        <label>
+          From Zip
+          <input type="text" name="from_zip" />
+        </label>
+
+        <label>
+          To Zip
+          <input type="text" name="to_zip" />
+        </label>
+      </div>
+
+      <h2>Room Videos</h2>
+
+      <p class="helper">
+        Upload one short video per room. All sections are optional, but the more rooms you upload,
+        the better the estimate.
+      </p>
+
+      <p class="upload-note">
+        <strong>Important:</strong> After choosing or recording a video, please wait until the upload finishes before submitting.
+        Larger videos may take a minute depending on your connection.
+      </p>
+
+      <div id="roomUploads" class="rooms"></div>
+
+      <input type="hidden" name="client_code" id="clientCode" value="" />
+      <input type="hidden" name="survey_type" value="Video" />
+
+      <button type="submit" class="submit-btn">Submit Video Survey</button>
+
+      <p id="statusMessage" class="status"></p>
+    </form>
+
+    <footer class="powered-footer">
+      Powered by AutoCloser MoveScan
+    </footer>
+  </main>
+
+  <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+  <script src="/script.js?v=24"></script>
+</body>
+</html>

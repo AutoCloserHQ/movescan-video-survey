@@ -151,6 +151,8 @@ function getClientCode() {
 }
 
 
+const surveyAssetBase = new URL(".", document.currentScript.src);
+
 function applyClientBranding() {
   const clientCode = getClientCode();
 
@@ -162,7 +164,7 @@ function applyClientBranding() {
     document.getElementById("brandLogo");
 
   if (brandLogo) {
-    brandLogo.src = settings.logo;
+    brandLogo.src = new URL(settings.logo, surveyAssetBase).href;
     brandLogo.alt = settings.companyName;
   }
 }
