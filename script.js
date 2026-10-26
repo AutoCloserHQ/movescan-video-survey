@@ -21,9 +21,9 @@ const CLIENT_SETTINGS = {
   aplus: {
     companyName: "A Plus Moving",
     logo: "AplusMoving.png"
-  }
+  },
 
-   txmoving: {
+  txmoving: {
     companyName: "TX Moving & Storage",
     logo: "TX Moving NEW Logo.png"
   }
