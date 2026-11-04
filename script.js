@@ -18,6 +18,11 @@ const CLIENT_SETTINGS = {
     logo: "CC_20250926_175433.png"
   },
 
+  openroad: {
+    companyName: "OpenRoad Moving & Storage",
+    logo: "OpenRoadLogo.png"
+  },
+
   aplus: {
     companyName: "A Plus Moving",
     logo: "AplusMoving.png"
